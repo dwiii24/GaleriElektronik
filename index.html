@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo-wrap" href="#">
+    <div class="logo-img-wrap">
+      <img class="logo-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAnFElEQVR42u19eXxU1dn/9znn3HtnJgkJW0BICAiojb6oDTvY2FKXarW1dnDBHcFqa3/t2/b3tr8uMW1f7WrfvnWpiiyuaFpt3eqC1ig7RAtqRMVAEpYQdrLMzL33PM/vj5mEoCCgsna+fO6HmczMnXPO9zzPebZzBsgiiyyyyCKLLLLIIossssgiiyyyyCKLLLLIIossssgiiyyyyCKLLLLIIossssgiiyyyyAKgo6MPFYTylxVwOlB4oqD0LUHlTQKQpN9SoVAB4GWo9POXgerTGagUAJIl+LBDhUI5FAprBVVV9hPdKh7XAICqKj4syN7ZHvvvRjAhHlcoLRVUVnLHH0tLS93W6KknsVanWGXKFDlDQNLbMhcQcwwQQJktREgQsJYg75ENljk28XpZTVVtFWAPA7LTfasqFWBn3/59CI7HddcZPXj4RcUpr/v5IoiLyClKbL6Am0G0BqTeEXADWbuVJRQAUOQoAvVhZYpJguNJpESAPCZsVdp5RQk97IUN/1i5+Nkdnd9ZXmFwOrjrZDowmuhlherqsOMvJSMnjRalr4Pfcn/Da4+/hIoK9UnaQEcSscWjLzsP5PyngE4X5W5TpP5JnHoMqS0vNtQ8vn5/bn1sWXxAys27gLQ7EaRHkg18hMknHLHT6pY8+NIuElxeYTLLwSeV7Iy9AIXqm2yHjTBkyBAv1eu0iwj0bSYqg9cN1Np0fuPSh5/84BgcLQQTKiqoY+YWjbnqGjE5PyWogcTtT4vfdtuaJbOf7ehAv/FTR1mWsUTmVCZTAkh/ERXrvJswQLRdiW0i2Hc1YzGobdGaBQ+8mVbzcFtzL72Ioa+D9sZBqQ0K9BhzasaaBTOX7Hb9x8vA6adzxpjbk4QS4rWE5tL0G6orw10m2fALTgpV3vWsI5PIePmwyYelbf2jiPV+IKIxcuXcGbVHH8FdOlQy6pJzWMV+K0qXKtJ3mcSmm+tqqhoqADV93LVfD9i5lLU3DtrpBeVCQIAIRAQAp2Wtw5AGgYhASoNEIGE7VBg2KBU+D07NXrdg+osA0HvEOX2jXvFUFrpCSAYj5HqC/E2h/SkTNC+pq5mz/ZN0r2TU5Z+BjnyNjTtRAcMkSNYR29slDB5uqHlwfcn4qy8RMXf1Tr7Ws6amJshwJEcHweUVBtWV4QknTOjZ1mPwNDLRr0rYdn/etje/U1u7cMuxo64amjQ5PwiV8xXSXiGTgdgQIiGTgJH2gggQ2tmzLp6QkAAkkh4zDdKktIbiFMgGq4jsY1EVzKp75e430mR8ZaCPgquUdi4kpU4UIR82fAMIXrGC1wnh21GlGu26xh319dXJrl0pK/tybBvl9EyRN0iMOVWUOQ1Qo0jpIojdokk/4kjq3vfnTqsBgJLyrxTUn37KjuKXNjxPYlMNc+85F/FHNaom2k+mCg8zlTyg7OJzxc27D0o1E7dNbljwwPxjR10yNKG7/ZSVd4k4eYathbC1BAsQFECU7sruutNB8IdfF7EMAQOioB2llAOyCagwucwg9VcnbH1k1ZJH3gWA0vJ4blvY/cwgDL9EYscJmYGkTRQslsUmQWiHdMwwzaSQR4oiEAKDtyjiZQC/ZCBPrp43YxkAlI6I922N9btcgvZrTWrj5XlB21vbuw1ugQSX1c+796GOCX+EE1yhgHRQomTM1Epy3J9xsuWPDYtnfYcA9Bt7w28D5X1HTMRwGICYQ2il06TyB7qyu+7wR7y+U7pFmIXBIDKkHGgSQFJQIss08wvAjmfGzr/vla5u1QkjLu/ZBgxixy0Ukb5KVA4AkOUW5XCzsrwmGknU1VZXtXYaiqee389GC8+Hil1kYUY6OYUxal9zf+Ort11RPPKy70I7Fce63Le6elaqSyOPVIIrFPBzjkP0wnE3PELa+ZpObYuvWjTrr8WjLh8fmm7TQif/eA5TACQEoImoS5vVp9SO9Jot0nVWKCZSBtqBAgGSgATJbYrobRAv0ja13Ej4rtHtjbkt72xevnx5264quizW7A05hiWvRCh6ihCfyhyUMdTxcPIUoKCMB+1vfXWoXn5ma+vxamNUrZOg9Y+Nix6oQHm56eo+HYEEpyW3rIxMc/T6ZxWpU9C+ZVx9zcMr+o2d8mNr8n7B8EjCZAilNIho52SmT7n5sqehEYiIkLAIFEBKaZNpigUJg8QCzD4UbReWrvfrRlp7IBeiTFpXcAgOUxDmpHZMxLFtS1y/8fz6Jc80lXzu+l+Q8r5n2lf0Xbn4Hy2d3/8JoQ4NuUKoAMpApjn6recUaJiz7f2T62seXnHMuOtnWK/wl6EYCAcMbQxI0a5k0qc8N2k3V6fprQjKKFKKwCLWtxykQrE2tCJsYWB1xLUq0ptNrDebSG82kd5We54VjZBDy0Ei5CAVwLJP2oXrRSNuasvfum999Qv1S55pGlJ2xWAyuT9B0PbdlYuf3YF4lfq0ImmHgmBCvEqhspI3nXb9M6R4GLe9e/Kpbzy7vt/Y65+3bq+rwiAVEhggUrsn4hBZgqSISGlSyoDIEFS6fWIFHAo4ELAVsBUSFkCEOvQ+KUe5EddR0mrClqnrFs28oDb+VjsABF7kEfFbF6+ed89daTdxov202mwOgSukUTUxLBo79c9C5nNINp0w+vU5G+aOu/456/WcYINkQETO4WkT0h6p36mbRQBFABGUBimjQQztb99i/K135Ke23e44ft/8EfG+tZXUVDxi0q+F5WS3pWkQIISqmz7VGLg+uOSWG1TPCktGTb7eRAsqdOuG01cvfWT5lrHXPcmRXmfZIBkQ9kTu4QbZ9SEBIE2kDBFAJKEoCdYqm3zZ9bf9tqC99qeWYpsCcm8W5dCKRbNfKBl77Te0l38LJTafU7fsr68jXqtRe8cRmmzIBM0HnXrhMMnrv0yS279bv3jW/xSNvvaPfqzvt22QCgj4ZOSKMAAWEDKWkNrZQeJ0iEs6fOdPYXmyECEASpj9UEtyhRGq0wgSCvo9EWmyxLkwsWNZ5FwDW6SS269vrHnoz0Vjplxsoj0eVm2bbqhbdO+d5eUVpvoT+ryHkmBCPK7Km6uoLpi8UrFdVr9w5lf6j736stDre78NwhD0cZcLERGyIBhSBkrpTJjSAsw7/WBlADIQAUQshANAEFIn2fQxJLjDhyYALAROkKg2gUSJlAOlPWgX2kSAtvWNUX/jhauWPrqkaPil39Sx7rch1fr9+kWzfv9pBDQOLcGZ+PKAsVN+RUp/1/FX9/b5mF7JSP4brCIRSEhd1rH9YBZMWmtSLhC2wbD/thI7n9kuIJtcrSFNAVlxxFKoTD+lcwayqLGs1BiQdzw7HoQZsCEDxPsv2byr4dfxUREICEobKE6JY9v+PHjend+uBsKS0dfcxm70myq5bXL94genH0hyDw7BFRUKlTdJ/1GXDjGxPu+q1I7LVs2f/mCfMde9zF6vcglTFkR63wcUgLAFOVoZBypsayYb3ueEW2c0LH6wtuOdg0Zd3Ie8/G4cklImyW7Cblmx5P7NHa8PHHnZyb7Ju4aV+aro6ADWDsQyhEOBiO2MfRL2MPk6JTj9IB0LJ5DSyhiQTUKJPyfKrZV182bMLR5x8Ynk5s8mUv0l3DyxYeGjcw40uQeH4Iz0Fo+++lkyulfD3GnDi8dde4Xv9pplAz8EabM/EiMioTIRQ7YtYTj5hwH1T/9y4Zo1icGnXVTso+AyFokL82dImQixiEASAEWVckkQtoBtLUj/hST1UOP86esAoN+YayaI9uJWzDnQXjF0JBOYSKt6EZZ0MiNtJqfJF4BEgRSBdDpLBQEFyVYjyadMsP2P9YsfXFgBqJmnfet/2Lg3UpB4zm164/KVK+duPBjkHniC0+TyoLJLRnCsYBGSm04dGIuteDcsWB2YaG9wAHT4kvuw5gnEauNpFWz/ZyTZfP3qpVXvDBp9xUhx82+F0uPCsK2JgecJdo4O+S0TtG1KqqDNDWO5lBvtE4T2JMD5PLT3RRjVl8JwMfttt5kNs6rq65EEgP6jJg8Tx/0iQ5ez0GcgVAzjRESbNJ+UXhsIBGEL4fYUQVYr4deI+Emf1z+1ef4TLWVlcNZ7195IcH6ijAmEUz9cM/fuGV0n/aF07D5d6R03ZY4CRern3T2+3+gpPwujhZUc7I9qhgiItVHa8bfeunbeXd8rA5zmcddNJ+1eRhK+oMP2P76/YNYztA8RIAJQPP7KCWK9a1jkfCgTJYXFBPUXjzf9feX8R97v9OxKyiPvFQ8YQNYrEm1iCFK9yXhNDAkN7LruLfWrly9/oTMOPfS0qZ9LUORGEXyF2W/TEtyi1977v/X1SGY8iYNayXkACa5QQCUPGHnZIIn2qNO25fSeiY1L1rrFTaGTnwsOpSNSRUSZJP2ezFVirZU2qU0/XLtg2q8HDZ80IvDy/i6QNuLE5DUL7nulSyAlXV5TWiqoBNKlsR2VFc0EnL5LZcWQkWd3SzolE6DVJGKcJhwWsvBWgq0Bq/kAL1PM7/Twt68tWPb31mogTLv08dxV1ikkzjuBBSMFwUgCjwM5uazNa0pkemFizayamqfaO9t1EFTywSM406GiMVfdqmAubFgwraT/6CnfDaOFt1o/CKHE7KNmDpVRxkk0/Wjtolm/OnbcdRewl/+YpLbfP3LeXVdXARbxRzVQtR/VkBWqrGy9rqm5O/jgKwNGTioVFTmNyU6AOMNApp8oyiVAIDYUse0CaEXIUeQKQweaZC2zX6Ns8knx173U+PqcdYdLOOaAqujy8nKzKjmoWbHctHrJrP89Zuy33gvc/MEIU/LhOPNu/SBrjKdNcsOdaxdOu6H41Pj5Jn/A32FTP1/16m0VgBDiE9X+rWdpzZJu35WR1lZPJXK3KgBoQyysr56V7Do4J40/t3sy6NE3FN2LHcoVZgWEICvtWquNMd6+8Y1FTzbTTpOahpdNjSZyt6poa4I3OFHRXkx6tW5WNTVPJXCQa68PDMGZtbdozBWfI/KqVVtzd+vkDg2jxywOpcPf3Cu7FsbTxt+67HjnjuH1W84fzLmFK4DwvxsWzPxJRkPY/RqwTLtKSkoi3Lf8XlHOlwWKiUh1hpFFVDqDRCJKsRCHBAQAhYqRTggSgYSJQQaAISIHIlrS92ABZ1YcAeAwtAFJuLW7XT/mzUVPbug6yQ40DkyyIVNFSJR7BZQsq1/29239Rl49SZQrsAHvUxaLNBT7gfHbp1TPBxeN6fMsJPz7moUzf4KyqU5mPZP9WjKqKsPBJ55ZHPQ47iUtHA0SWy/ZoKJbHTdHDCkJg4zGNg4QALApghOBCBOEqXO4OtPSLBSq9DOyu7QlQAhwqHoTG02pIULO9HaV3xvAhoMpwQeG4OqbLFAJITqTiGcAQOi4ZzMsgWTvYUERqxxHq2Tz/WuWzlwyYMzUW6G9Qrdp0RVpSxT7J7npCREMGj5xhO/mzVGcWrA6SedRzcPBknjpgJaW7RwFEI1GMx9I7PleCQDRnU+jH3ip65NYfgENufCtdTdNxLzpY679o4iXLuWtANIG4BGpooUAkqEnx/uncnuvIU5+NrSpjWGkV2MojtDeQ5ICUiD2E9FE8xCro9pEoo0qaJm4asHMqv22RjPvLx591XmIFDzh+NvurZs/89pbJgw/9iSTeLIb/NKklXRZDnWpUZWPGq0uJoQAhHRoUkgyn0t7BXkxD2+08w+njnvrtyXPXxOK9c9rWPzg0wfTD/70E/7xiQoAkhG3jDmZXL1g+r/gRL8gOhcQ2nunRCxplxxO/q2h5sH1pOUXbFPvrlowswrxuP445A4afcW1ys15IhK2/rhu/sxrb/182Zmnmh2L+0mylIJAcsQiygEiNoBn0/9H+MNX+rUQEbbwbJh5HMK1YeY1iwiHHe8PHT+FAiJGJTFARNoc9FTop6+iM+uvkDcGQCMB0k+Z8SAF6kycfpT8k9KchLatdxaNjkehnMtgU5MB7NwhsB/kloy69j8Ryf29m2ia+t6i2ffcNuGzk/7DtM6McGjaQrFQSnOm6rbDF/+gT95R50fp9nXmf0V26qyuYk5IO8sCBdUpQwQyzkHfvXjASnZEmTIoswwAWPRnhO3elwQRIeUoBP76xkX3z9Um/6tE4h/r1T0KQDJW876uuWHxmKt/qKJ5v/eSm696b9Hse277Qtn3TnZaH3BtSictWBR0pha+8yIAiqjz6lqlJdSRU8j8n8kz7FLJRQIhgc6kKFjtHGmNgx7nOAAEZ0hQpIZoohWZKV4E2TvBAlhSGgpBNQCwVVPAwUvV1dXJdDBj74ZVWdlUBzV3BwNHXvV98rrd4oWbzlux8P5Z95x1yk+HR1p/p0Of/bQloDpWz3RBNO/x7p2SnfnHwpCPaIpkSBcwkkFIHWtyGLA60gkmAFJeXm6gqKeCeqe8HAZQhWJlp677yAYJlPCC9BMarhhPp9XzW7Qvarmm5u5g0JhrblCx7r+NpjZOXDH3/qfu/sLJNw/T7T8P/KRNAQQS4oykpYeAMmkiyUip7KKedzZbAVAgIShRexwCSe9mAAsQ1bQh/ZUqMGy2AQBKS+WIVtFbXdcDlFGEuve3ndtHSEdBe7faCYogAYDkm8eWxfNJ6RxWwVIAgsJa2SeDquyKr8Prebvxt055Z8FDVXd+YdgvTnFTP/L9VBgIFERIOp1Z2a307WUVAe1lpemYFALAkGxHyU8LSEGTDrYd4RJcQQCwpaWgAGI9m0q26UiRI4r2JckDIWhwiKifqE96sUEMsY60NgBAevf7R0SoqivDQWXxkRLLrXL8jd97d/7MaXedUfZ/T4n4P0mFqTCE1op0OmiV6TaBoARQGYmkjLUkBDAhs84yRBE440LpjvdAwMQfvsRmtjtBhVBwjGpGj/aYgMSGfjrrVHnkqmgAQB45hgia4QdsbE5Gxcle3V8QRCy3BFtaJOQSMHOxuyWz675S9hhbrqqyx596cT/OKXxZB63T350/89Y/Tjj1mlOc9l9LkAoDkDYM0ryrEvmQtNKuUihEYLWrVb23daKjrwRQCoweenuziaT6MxQcbttydFjRkQiYOVRa2pBs606kILJzp9jul2ISUgQB+ZHt/g4S9gAAq1d/tFaP11IZ4LRFc14k2NfeX3jf5JvLTz37eJOYxkHK+pa0kbRwCgEaBA3KpKIVOCOt3OH9UBe3iLCLOhYArAlMjA5Fn47bqF2oJyJoRZRkBGN6rFnTHa0nECSZh6e2f/RkPUIITiSTIKUMbFhAsZ5rRRiU1o+79TM7GRYGESK2ILenMjlNAvDGnIHmI9Zdjaoq2zTq6hkEW9DXf+qM35w9dvCIaPLhfEkhwUKkuuxD+ejv/7BNj93lqWUXw4sEUF32+Ge2UAkpQgp6s5qFZAR6MIg21NQgyHjNRyrB6ZmZ77ZtF6YU3III+S2CXXbe78WCgYJEesdc9tcD5LXG+hd2Xd8/uO4eO/ryS91YwaRcv+WchWdNTg3mlkcKkSpIWTCBlUAgaqfR05ENkk63hzuv9N81WATSxXUiYVDHeiyc/mxHSZZ0EE0AdCb4IaIJCIXWpLUCH29ZGrtG+o5oCQ42vtcOkpBZinJaVm8Ch8E+7ZYTMJQHcZwS27SqUZGGckxRemBqadd191Hu/x9nF4UUeYBS2/7r7aV/fX3m3L/+uQhtZdv8INQErQGQMJNYS+lNgiBOX4oZWtB5KUHmbwItAmJmYkk7QySZOLVAQUBsQWKhMsR3XmLThXci4gJMUO8iHek5AdYu7xrpO1IJFgCora31GbSViQbW1la3gu32tPW6V90oIA1hPbK+vjpphTeFYkZ9KEwZryWARHcb9CiRXVo3f8Zvfnf2mGtOzqcpCSikVNQEyiA0DuC4SrSjQ63JagehdhFqB1Z1XC5YexDtwSoXIRmwdkHGU6JcCpULVi6YHEjH48wVaoP0PdMXK4OQHCTJMcqNKe14/8qM8iCtwsxhLi8f4bHoTKZEidSDMDSzLq2Fol4IM7HAjzCaRAQCNQHAzcTJaiE5F8BvO/3gjiL6sosmk6LP9lKmqB7AcXn+nFR7+/AkVDiwO3YABHiE1xoTPVOWvGHHOBtyoO3ulEjEEyAVQRJJ+FbI1VGpbg77Ky/qn5RrtwbM+yx1GoANAqlJUd/1gf/uMeO+PYAR5FKw9bV0pO90BqqP/GSDkvBdYZwCgEjsChCdjL0lG0iUcAhRZnhZWZmziTGDTe6T/UZ8tee6qqotHWW4fYZdUBi6ebdRYtvsDaBBxeOmnnDxatPanuIUhAnN1G1nDymJQCXQJrF00j4DF4DfsaYAcHwAOekn3GaxfPJC4PMhTryqGN1KUkj4Avb3TrRyBVGfsJ03o/YPWwaNP/2yEDqlYuvfP9gW9IEhuEPXMi9m0AVpn1CWEHARfzDxshsvUjhkODndmviUM6LNa19MHDPUaqfXlQBuHdLS16wEUtForDJwYg5ExaFwpYhGT5fRy+GMEZWeSCSZsKPLu/i60vHA6ZhuArYKSgWAckUpjyKn/HbcIPfsN5e5ue8xtRnkhl1mJ3Vmk3bZlk4AkLRQjlbdNlVPqag4Y8bzjV+EcpfVV1cnD2Ye+MARXJ3xd237qzC5eUPGX93bBq0vWBMDkdJEe3ZT0i6GMEMpC/d7K1c++0xRn+LfCbk/Kgf+tzqvKQRAUT/xq6ja9CsWS0GKP1FtE7uWlK8lJGuoPdkedi+6h+Gc+M6/npm/Y/SVN1qT61lrmZSrP6TdaXeReJA2ESXsvVBZWcn9x04+U3Hq7kNhYO1LYOZjJxxKS0vdbd3LN2nF32589a5ZfcbfuN7qnD5guy81WawphEluGWei+BeH3hbxW29es+ShXyKTLToQg1FS9rUT2Ov+tg5bz+ppV/5zbXTc+6GOFcGGvEsJxx6HTQBRohST6289LsLJZMLLb9TB9rKGhQ++9knPnTxcVLQg/qiurZro9x9XPl/ETAIwU0tqDqu8S8XavVdVirB1coyibVfVV8/4RvGoy25QeX1nDBp1xROrFt29vKxsqlNTc1cI3PTJJ2i8lsqbS6mwulIWRo/5J8LWZ1YvfuT51Nhr/5+4+cXiJyx12YGRjsrtKa9IlozRyt/6xpqF964sGnfDLyHh2oaFD/4LEEpXdhxcHKCqytvThhb8h1nce4C4Ntw620rBpHCv+0RFoLSioK2dbOsfgArVuKhyZsnnbrw4dLs/V1paOrSm5u5WxLd+GusZoblCVVdXhv3HTn7IKPJyYC4vLrtosK+7/dCGAdMHJuNegjVCBBD7d2eWnCuJ1eMAGOU3GVQf/Iz/gYmqVFdbAMizO54km6KS0d4ZtG7tHAqTW0kbnT4ddI/0WmVcpf0dN69bWvUOytZrVFSonE3Lvw4OtrR0H/9iaW/koqrKorzi40/QeFwDgnTlx+S7tfEuQfv6CbUL791ivR4zrY7lgUPZ933LIlBaK7+1LRrsuL94xMUnErjI2PZ7drFNjgqCO9T0wqotEPsPFveH9fXVSc3Bg0oZgHevqkSElXGNSm56M3fz2t8hHteouTtEJVBbW90a3fhWOZjz2o775utDx196LKorQ1RUqMxB3rTPxMYf1aiqsnGQGjB2ykNkopNV0Fpev/Svrw8YPeWu0OsxXsJkuB+b4wCBVdolJeHsupqq7VDeTQhSi1ctum95un2Vh4TgA2fVZVyCgcMvL+dYz5c9P1GkVCBbVW69pYimjvrSLiMkoq1WVntt9ac11lTN7eJWUGlp3KmtrfJLS0vd1p4T5pDxxiFoubF+7l13dEk+GOBloLBQOvPHFQBqM0f6dqnILBl5zefJy72HJcjRwdazVi2avbz/mCm/Cb0+P7Bhaj+PlBABtCj4NuqvO85xCtsCss0mtfmr7y9+5O+f1ql1hxfBmSUJICka/83VCvxiw9w7J/cZc/UDHOk3SQJ/10EUCZUbNSqxflrTgmlTOuufu/iOxWVfHQ9urWt8fc66ktO+eZOw/RnbxBsS+j/PX/rwk7U7Qxd7xKCRk06zOvoDciLngfkRND59VX19fbL/2Oumh26vq8PQD4nE7NfQiITK8YxKNt3btODea0vGf2MaQZ81Yu7tA6vSh1Ufst+COLAEZ2bugLFXXwbl3c9hXU8V5hb4sYFvW3haJMwkUpmhXBhObOrWvvLEd79ctgW1tQTEgaqJdtiwYTmbY5+7KTD6+wpo9Lj1G/Xz731mwAlnHcN5fX/F2plExt1OwAtA8hXyU2+EmjcCgAkll5V7gtaR8ay8s0ipgQjb5hlu+89VCx9ePHh0fEhC9Xkg9PJH2TCwBNb7OiwZv12EtGhub4sFzUOZLVG0z3oVtF9St2D67EMR3DgYa3CHsRWiokI1zJ/xEHOiHtLnDw1LH6tTYfJOZRwNlnRsWCCKQqX9Ld97t+apTaiFQVWVRdVEO2DEpAnNeeMXpmI9vs/KY2tyi5Omx9P9xlzzZ53v8pols67MU83dFfBLQAYwnJutcv9JiL2tdP7b7HRbQmT+zCLjieyjOmw5oXH+tPF605Jl/cZe/7NWU/S67+aPskHKEkTv75wXgdXGUdpv/fmqRbM3sM6504Ztb9ctmD4bFRXqUJJ7EFT0zrW4eORFZ1K073MmtX1YZMeqVZsLPvO21QX9AQ7JaEclml7YsHDGmUPOvtFb+eyfUiefXF6wOXbCzYHJvd4qB8JBSFCGIMwg0tohhG07HLaPa2m9u2HBzPkdX1laCtfPvaAQxvUQmo0rFz/Y+WMbA0ZeNihw865hONeKk9+XQx+QgEF6vyY7EUGYLTmeNv6WRevn3Tm6ZOQVn6dI3ksqtfa0ukV/m3uopffgENyF5KJx171I0IWN8+74j+Kyi84M80qe8ynia2nn3JZ1I+tqHsqctH7Fl1Jujz9ZkzeYwySTCEgptYsPKrBQWivtgGwK4FQd2F+oiBcTVJ3isAlCSRG/mLXXn0mdCtJjBO7J4sZIbAhYazOb4Wh/iE1LrhUhw4ZTYW6qqayA33t3c86otbDBU6vn3XPN4UDuwSMYFQoABg9f0d93u6+Gbflx46IHf1U8/vrf2Lz+P5Ad6/57/bw7fnLcceW92gqGVoZe/g1WeRDrh0RkPkpBisASkSblpM+GTEc6QWzTBejUcfQVgVkg7AMiIQj6Y5zNtdPihw4cDcdpWfONxpoH7yoZP2UaKfdroV/Tf01xsX+4/NDWQTqrsloQL1Rb5zy6rVvhkPdMTr87e/Q54cX6BffcW9CzTyx/e93N3pCzzmnPK3nMevlnMAtDrNBe/VCiTB0sQSzDhlY4ZGFO55FEwMwsbFk4ZIjtqKr7ZOSKCowbcUx7021rltz3iwEjJ32d3JxbVHLbWQ2L/vE+TjxRobaWcRjg4GY3Os7tGH/9TAV9YWzT2wNXrHhxc/HIK34U5A64OQgDEFubkS4cjhBIoB3P0clNj62ff9eFRcMvOEl7vd8gv/WHq5c89OtD6fMeeoIBQnmFLmutpA3u5IWAmMjGV0YG+SMGBdFez4amW4kNU3tRy4eSXATacR2d2vzPqfP+/MWHTo4fk8zr/SbZxHMNC2ZcfKhO0jl0btLuxqgaXFMjoW5fOYHI7e73Oeu5+pqHV8QSzRN02PKOciIGIuFhRq2IIDTGc3Rq2zM5G+Z86fFhw6J+Xq9FmuStUQtmTMpUedrDbVIeghPfKxnxiap+WfU2L9wwVrRbWjL+W9Urax55321ZNtoEW17WTsyIwO5jAfMB5pZZoKAdz5jUxofWz7v9XI4Nyt+aP6YG4A0lDc98sQrCmdCoZAkG0j+dGo/rlYsfX+O215VZsUOLx1w7P9m0Ilg/947PO6lNd2tjtGiH5JBJswhEQtJRZcBwExv+a+38uyYVj7jwxDB/yHJAtuVsebW8ur4+mc5LVzIOQxxaSybjKx53XFmvRM9hL0K5hSZMnLVq0X3Li0ZPvtR3uv1BTF6hhIl0Jfr+ZHc+mUK2pLQm40Glttd6dtvUhoWz5g0ceelX2Ov+GIn/dK+591xYAwQH80ikw9hN2gNqawXxuN786py2wjX/mmGLy04RJ3Z7QdFJGxoXTJ/RPbfbdHKix5DSp8BElYiV9P4W0Md3cz5qnSULIqUdTxH7CR1s//2G+bd9bfuaZY3FY675NdycP2mb+s3qedMmr0/XeB/W5B56Cd4lEJIeqOLR13wDJvYnBXlFJ5qvrqupahgw6sqyUOfdYk3sDNYe2PoAs6Wdx/N/XJ82vWEfBMpExRC0seHUI8bf+pOGpQ/VDRh95Th2c+8n5j4q2HJ5/aJHHjsUh4oe4QRn2hKPK1RV2UEjLjoudAtmCAejYf1bxix+oKIKsP3HXz1KJOf7IakvwcRyBArCDBHLJOmfpaL0MXT0Qf8m8xXSsYUbIEVKKaUMCBZkW5sV7CNuYvvtq5c++M6QIeN7p3oO/YPyYpNEuCo3Wfvt2iXVTYdLCPJIJDgTDNkZKOg/8qLLReX8RmkvTwn+NGhtbWV1fXWytHR0j235n/kKdCxuyR0tyu0O5WSMbsr8NscH9/6mD2+nzMEqYB/CyWbD/Iri9r8Odqf/pboa4dDRV/QPybs5JH0ZiV2puOUHqxfNfqKrzYAjCIfpD0RXqPRpcJU8ZMgQL9l3wv9RMN/jINlNJJitRG5vXHL/0o4O9Bs/dRQLjQbTZ6GcgQzqB0hOushdpTeKgTaJhJsBeV8Jv67gL+7648/FZRefITr6HXLcc0hUnbD/88aF987qQiwfCSr5CCF4VysbAMoAZ+OIiRND5X2LdGSUKGebkuB5+IkndduWF+trn2nan1sfP/b8fknpdbZo98tWZALZICpsq0lSd6xZMvvx3bXhSAQdEW0sL9dd47vHjrpkqG/yzhcJz4Plz7JwHpTaQKTXitAqUbRSxG5V1goDUKSUiOpLCkWKZJCILSZSvUHONi28VET+QsGWJxpqHl9/tBB7JBH8ASOsVLq6JiUlJREuHHMSK++zAvVZVuZ4IckntgUEiqW1qtkuQBuBm4jC9zUHNcrysl4y+830rvsupHYEYo4S0JHZ7AqFcigU1sonJiMe12hupkwtt+AoAx0VfaioILz8sgJOx87fa7hJdlYzCqHiJuosn8XLmX26R4Yvm0UWWWSRRRZZHFJbibLDcPSS+7Ghs+N3+KK8vNzU19fz+eeff+pxxx2Xe8kll2wrLCxUtbW1Wcv/aJLc8847b/6Xv/zlh/5d/eCjltxzzjlnpNb6NwDGZ/z1p5n5x08//fRbmfftVZJVdiwPX5K11q0A1mSItAAarbWJ7NAcZTjvvPOeOPfcc+/MquijDPF4XJeWlsqCBQuOjUQi7Z7nbQCAqqMoGZJFFv82RldW22aRRRZZZJFFFllkkUUWWWSRRRb/3vj/kN0mgPKGkT4AAAAASUVORK5CYII=" alt="GEJ Logo">
+    </div>
+    <div class="logo">GEJ</div>
+  </a>
+  <div class="search-bar">
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" id="searchInput" placeholder="Cari produk elektronik..." oninput="filterProducts()">
+  </div>
+  <div class="nav-socmed">
+    <a class="socmed-btn wa" href="https://wa.me/6285111219945" target="_blank" title="WhatsApp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.1 1.51 5.833L.057 23.517a.5.5 0 00.609.61l5.801-1.517A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.933 9.933 0 01-5.11-1.404l-.364-.217-3.795.993.997-3.71-.236-.376A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    </a>
+    <a class="socmed-btn ig" href="https://instagram.com/galerielektronik.btl" target="_blank" title="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </a>
+    <a class="socmed-btn tt" href="https://tiktok.com/@cv.galeri.elektronik" target="_blank" title="TikTok">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.87a8.18 8.18 0 004.78 1.52V7a4.85 4.85 0 01-1.01-.31z"/></svg>
+    </a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Elektronik Terbaik,<br>Harga Terjangkau</h1>
+    <p>Ratusan produk elektronik original bergaransi resmi.</p>
+    <button class="hero-cta">Lihat Semua Produk</button>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <div class="hero-badge"><div class="num">300+</div><div class="lbl">Produk Tersedia</div></div>
+    <div class="hero-badge"><div class="num">1,8k+</div><div class="lbl">Pelanggan Puas</div></div>
+    <div class="hero-badge"><div class="num">100%</div><div class="lbl">Barang Original</div></div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="sidebar">
+    <div class="sidebar-title">Kategori</div>
+    <button class="cat-btn active" onclick="setCategory('semua')">
+      <span class="cat-icon">🏪</span> Semua Produk <span class="cat-count" id="cnt-semua">0</span>
+    </button>
+    <button class="cat-btn" onclick="setCategory('tv')">
+      <span class="cat-icon">📺</span> TV & Audio <span class="cat-count" id="cnt-tv">0</span>
+    </button>
+    <button class="cat-btn" onclick="setCategory('kulkas')">
+      <span class="cat-icon">🧊</span> Kulkas <span class="cat-count" id="cnt-kulkas">0</span>
+    </button>
+    <button class="cat-btn" onclick="setCategory('ac')">
+      <span class="cat-icon">❄️</span> AC <span class="cat-count" id="cnt-ac">0</span>
+    </button>
+    <button class="cat-btn" onclick="setCategory('mesin cuci')">
+      <span class="cat-icon">🌀</span> Mesin Cuci <span class="cat-count" id="cnt-mesin cuci">0</span>
+    </button>
+    <button class="cat-btn" onclick="setCategory('freezer')">
+      <span class="cat-icon">🧊</span> Freezer <span class="cat-count" id="cnt-freezer">0</span>
+    </button>
+    <button class="cat-btn" onclick="setCategory('kipas angin')">
+      <span class="cat-icon">💨</span> Kipas Angin <span class="cat-count" id="cnt-kipas angin">0</span>
+    </button>
+    <button class="cat-btn" onclick="setCategory('dispenser')">
+      <span class="cat-icon">💧</span> Dispenser <span class="cat-count" id="cnt-dispenser">0</span>
+    </button>
+    <button class="cat-btn" onclick="setCategory('kompor')">
+      <span class="cat-icon">🔥</span> Kompor <span class="cat-count" id="cnt-kompor">0</span>
+    </button>
+    <button class="cat-btn" onclick="setCategory('cooker hood')">
+      <span class="cat-icon">🌬️</span> Cooker Hood <span class="cat-count" id="cnt-cooker hood">0</span>
+    </button>
+    <button class="cat-btn" onclick="setCategory('rice cooker')">
+      <span class="cat-icon">🍚</span> Rice Cooker <span class="cat-count" id="cnt-rice cooker">0</span>
+    </button>
+    <button class="cat-btn" onclick="setCategory('water heater')">
+      <span class="cat-icon">🚿</span> Water Heater <span class="cat-count" id="cnt-water heater">0</span>
+    </button>
+  </div>
+
+  <div class="content">
+    <div class="content-header">
+      <div>
+        <div class="content-title" id="categoryTitle">Semua Produk</div>
+        <div class="content-count" id="productCount"></div>
+      </div>
+      <select class="sort-select" onchange="sortProducts(this.value)">
+        <option value="default">Urutkan: Default</option>
+        <option value="price-asc">Harga: Termurah</option>
+        <option value="price-desc">Harga: Termahal</option>
+        <option value="name-asc">Nama: A–Z</option>
+      </select>
+    </div>
+    <div class="grid" id="productGrid"></div>
+    <div class="empty" id="emptyState" style="display:none;">
+      <div class="empty-icon">🔍</div>
+      <p>Produk tidak ditemukan.<br>Coba kata kunci lain.</p>
+    </div>
+  </div>
+</div>
+
+<footer>© 2025 Galeri Elektronik Jaya · Toko Elektronik Terpercaya · Garansi Resmi · COD Tersedia</footer>
+
+<script>
+const products = [
+  // TV
+  {id:1,cat:'tv',brand:'Aqua',name:'TV AQT-50S80EUX 50inc',price:3299000,oldPrice:null,emoji:'📺',badge:'new',rating:4.5,reviews:32},
+  {id:2,cat:'tv',brand:'Aqua',name:'TV AQT-55S80EUX 55inc',price:4799000,oldPrice:null,emoji:'📺',badge:'new',rating:4.5,reviews:18},
+  {id:3,cat:'tv',brand:'Aqua',name:'TV AQT58S85EUX 58inc',price:5999000,oldPrice:null,emoji:'📺',badge:'new',rating:4.6,reviews:14},
+  {id:4,cat:'tv',brand:'Samsung',name:'TV UA50U8500FK 50inc',price:8499000,oldPrice:null,emoji:'📺',badge:'new',rating:4.8,reviews:41},
+  {id:101,cat:'tv',brand:'Changhong',name:'TV U55QCN1 55inc',price:5499000,oldPrice:null,emoji:'📺',badge:'new',rating:4.6,reviews:16},
+  {id:102,cat:'tv',brand:'Samsung',name:'TV UA55U8500FK 55inc',price:10999000,oldPrice:null,emoji:'📺',badge:'new',rating:4.8,reviews:22},
+  {id:103,cat:'tv',brand:'Polytron',name:'TV PLD-24V1853 24inc',price:1499000,oldPrice:null,emoji:'📺',badge:'new',rating:4.4,reviews:27},
+  {id:104,cat:'tv',brand:'Aqua',name:'TV AQT-50S85EUX 50inc',price:4199000,oldPrice:null,emoji:'📺',badge:'new',rating:4.5,reviews:19},
+  {id:105,cat:'tv',brand:'Samsung',name:'TV UA50U8000FK 50inc',price:7999000,oldPrice:null,emoji:'📺',badge:'new',rating:4.7,reviews:35},
+  {id:106,cat:'tv',brand:'Aqua',name:'TV AQT-43S85EUX 43inc',price:2499000,oldPrice:null,emoji:'📺',badge:'new',rating:4.5,reviews:12},
+  {id:107,cat:'tv',brand:'Coocaa',name:'TV 43S3U Plus 43inc',price:2199000,oldPrice:null,emoji:'📺',badge:'new',rating:4.5,reviews:63},
+  {id:108,cat:'tv',brand:'Changhong',name:'TV L43ST1 43inc',price:2299000,oldPrice:null,emoji:'📺',badge:'new',rating:4.5,reviews:18},
+  {id:109,cat:'tv',brand:'Polytron',name:'TV PLD-32RG5059 32inc',price:1299000,oldPrice:null,emoji:'📺',badge:'new',rating:4.4,reviews:9},
+  {id:110,cat:'tv',brand:'Coocaa',name:'TV 32S3U 32inc',price:1799000,oldPrice:null,emoji:'📺',badge:'new',rating:4.5,reviews:71},
+  {id:111,cat:'tv',brand:'Changhong',name:'TV L32ST1 32inc',price:1699000,oldPrice:null,emoji:'📺',badge:'new',rating:4.5,reviews:44},
+  {id:112,cat:'tv',brand:'Changhong',name:'TV L43ST1 43inc (batch 2)',price:2299000,oldPrice:null,emoji:'📺',badge:'new',rating:4.5,reviews:51},
+  {id:113,cat:'tv',brand:'Changhong',name:'TV L32QCN1 32inc',price:1999000,oldPrice:null,emoji:'📺',badge:'new',rating:4.6,reviews:37},
+  {id:114,cat:'tv',brand:'Changhong',name:'TV L43QCN1 43inc',price:2699000,oldPrice:null,emoji:'📺',badge:'new',rating:4.6,reviews:32},
+  {id:115,cat:'tv',brand:'Changhong',name:'TV U50QCN1 50inc',price:4499000,oldPrice:null,emoji:'📺',badge:'new',rating:4.6,reviews:28},
+  {id:116,cat:'tv',brand:'Changhong',name:'TV U55QCN1 55inc (batch 2)',price:5299000,oldPrice:null,emoji:'📺',badge:'new',rating:4.6,reviews:21},
+  {id:117,cat:'tv',brand:'Changhong',name:'TV U65QCN1 65inc',price:7499000,oldPrice:null,emoji:'📺',badge:'new',rating:4.7,reviews:11},
+  {id:118,cat:'tv',brand:'Changhong',name:'TV U58LS 58inc',price:5999000,oldPrice:null,emoji:'📺',badge:'new',rating:4.6,reviews:9},
+  {id:119,cat:'tv',brand:'Changhong',name:'TV L40ST1 40inc',price:2099000,oldPrice:null,emoji:'📺',badge:'new',rating:4.5,reviews:17},
+  // KULKAS
+  {id:5,cat:'kulkas',brand:'Sanken',name:'Kulkas SK-G199 EH-BP',price:2199000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:32},
+  {id:6,cat:'kulkas',brand:'Sanken',name:'Kulkas SK-G346',price:3499000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:28},
+  {id:7,cat:'kulkas',brand:'Polytron',name:'Kulkas PRM-21D',price:2799000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:41},
+  {id:8,cat:'kulkas',brand:'Polytron',name:'Kulkas PRB-217',price:2599000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:37},
+  {id:50,cat:'kulkas',brand:'Polytron',name:'Kulkas PRA-18MN',price:2399000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:44},
+  {id:51,cat:'kulkas',brand:'Polytron',name:'Kulkas PRA-18MO Hitam Putih',price:2399000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:51},
+  {id:52,cat:'kulkas',brand:'Polytron',name:'Kulkas PRA-18D',price:2299000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.4,reviews:29},
+  {id:53,cat:'kulkas',brand:'Sharp',name:'Kulkas SJ-X166 GB',price:2499000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:38},
+  {id:54,cat:'kulkas',brand:'Sharp',name:'Kulkas SJ-X168 DB',price:2699000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:55},
+  {id:55,cat:'kulkas',brand:'Sharp',name:'Kulkas SJ-X168 DP',price:2699000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:22},
+  {id:56,cat:'kulkas',brand:'Sharp',name:'Kulkas SJ-X186 GR',price:2899000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:47},
+  {id:57,cat:'kulkas',brand:'Sharp',name:'Kulkas SJ-X186 GB',price:2899000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:31},
+  {id:58,cat:'kulkas',brand:'Changhong',name:'Kulkas FSS630NIGB 2 Pintu',price:4299000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:18},
+  {id:59,cat:'kulkas',brand:'Changhong',name:'Kulkas CRF-208',price:2199000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:24},
+  {id:60,cat:'kulkas',brand:'Changhong',name:'Kulkas CBC-50',price:599000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.4,reviews:19},
+  {id:61,cat:'kulkas',brand:'Sharp',name:'Kulkas SJ-197 VB2',price:2299000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:34},
+  {id:62,cat:'kulkas',brand:'Sharp',name:'Kulkas SJ-197 VP2',price:2299000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:41},
+  {id:63,cat:'kulkas',brand:'Sharp',name:'Kulkas SJ-236 GB',price:2799000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:27},
+  {id:64,cat:'kulkas',brand:'Sharp',name:'Kulkas SJ-236 GR',price:2799000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:33},
+  {id:65,cat:'kulkas',brand:'Sanken',name:'Kulkas SK-V235PA-BB Black',price:2999000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:15},
+  {id:66,cat:'kulkas',brand:'Sanken',name:'Kulkas SK-V175PA-BB Black',price:2499000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:12},
+  {id:67,cat:'kulkas',brand:'Midea',name:'Kulkas RF-MDA-SBS Black',price:8999000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:9},
+  {id:68,cat:'kulkas',brand:'LG',name:'Kulkas GN-B202SQIR',price:3299000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:11},
+  {id:69,cat:'kulkas',brand:'Aqua',name:'Kulkas AQR-185-MME',price:2199000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:16},
+  {id:70,cat:'kulkas',brand:'GEA',name:'Kulkas GMB-50 Inox',price:599000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:43},
+  {id:71,cat:'kulkas',brand:'GEA',name:'Kulkas GMB-50 Matt Grey',price:599000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:61},
+  {id:72,cat:'kulkas',brand:'GEA',name:'Kulkas EXPO-50 FD Black',price:649000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.4,reviews:18},
+  {id:73,cat:'kulkas',brand:'GEA',name:'Kulkas EXPO-50 CVD',price:699000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.4,reviews:14},
+  {id:74,cat:'kulkas',brand:'GEA',name:'Kulkas G2D563.R Black Glass 2 Pintu',price:4999000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:8},
+  {id:75,cat:'kulkas',brand:'GEA',name:'Kulkas G2D-472.R Black Glass 2 Pintu',price:4499000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:7},
+  {id:76,cat:'kulkas',brand:'GEA',name:'Kulkas G2D-448.R Black Glass',price:4299000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:6},
+  {id:77,cat:'kulkas',brand:'GEA',name:'Kulkas G2D-267-WD',price:2799000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:10},
+  {id:78,cat:'kulkas',brand:'GEA',name:'Kulkas G2D-267',price:2699000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:13},
+  {id:79,cat:'kulkas',brand:'GEA',name:'Kulkas G2HD-198',price:2199000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.4,reviews:9},
+  {id:80,cat:'kulkas',brand:'GEA',name:'Kulkas G2HD-217',price:2399000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:11},
+  {id:81,cat:'kulkas',brand:'Aqua',name:'Kulkas AQR-CSE565RBCCB 2 Pintu',price:6499000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:5},
+  {id:82,cat:'kulkas',brand:'LG',name:'Kulkas GC-FB507PQAM 2 Pintu',price:7499000,oldPrice:null,emoji:'🧊',badge:'best',rating:4.8,reviews:14},
+  {id:83,cat:'kulkas',brand:'GEA',name:'Kulkas G4D-404 Black Glass 4 Pintu',price:5999000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:6},
+  {id:84,cat:'kulkas',brand:'Sanken',name:'Kulkas SK-G236P AH-BK',price:2699000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:19},
+  {id:85,cat:'kulkas',brand:'Polytron',name:'Kulkas PRA-18MO Hitam Biru',price:2399000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:21},
+  {id:86,cat:'kulkas',brand:'Polytron',name:'Kulkas PRS-480X',price:4799000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:12},
+  // KULKAS SHOWCASE
+  {id:87,cat:'kulkas',brand:'RSA',name:'Showcase Kulkas TOPAZ-1100IC',price:6999000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:8},
+  {id:88,cat:'kulkas',brand:'RSA',name:'Showcase Kulkas TOPAZ-750IC',price:5499000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:7},
+  {id:89,cat:'kulkas',brand:'RSA',name:'Showcase Kulkas TOPAZ-600IC',price:4799000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:6},
+  {id:90,cat:'kulkas',brand:'Polytron',name:'Showcase Kulkas SCN 280',price:3299000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:9},
+  {id:91,cat:'kulkas',brand:'Sanken',name:'Showcase Kulkas SRS-229BKR Black',price:2299000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:11},
+  {id:92,cat:'kulkas',brand:'Sanken',name:'Showcase Kulkas SRS-229BKR Red',price:2299000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:10},
+  {id:93,cat:'kulkas',brand:'RSA',name:'Showcase Kulkas AGATE 200.R',price:2999000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:7},
+  {id:94,cat:'kulkas',brand:'Sanken',name:'Showcase Kulkas SRS-185BK Blue 1',price:1999000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:8},
+  {id:95,cat:'kulkas',brand:'RSA',name:'Showcase Kulkas RUBY 200',price:2799000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:12},
+  {id:96,cat:'kulkas',brand:'RSA',name:'Showcase Kulkas AGATE 240.R',price:3199000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:15},
+  {id:97,cat:'kulkas',brand:'RSA',name:'Showcase Kulkas AGATE 320C',price:3799000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:10},
+  // FREEZER
+  {id:201,cat:'freezer',brand:'RSA',name:'Chest Freezer CF-460',price:4299000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:18},
+  {id:202,cat:'freezer',brand:'RSA',name:'Chest Freezer CF-310',price:3199000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:22},
+  {id:203,cat:'freezer',brand:'RSA',name:'Chest Freezer CF-750H',price:6499000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:9},
+  {id:204,cat:'freezer',brand:'RSA',name:'Chest Freezer CF-160',price:1999000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:41},
+  {id:205,cat:'freezer',brand:'RSA',name:'Chest Freezer CF-110',price:1599000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:33},
+  {id:206,cat:'freezer',brand:'RSA',name:'Chest Freezer CF-210',price:2499000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:51},
+  {id:207,cat:'freezer',brand:'GEA',name:'Chest Freezer SD-360 BYR Curve Glass',price:3699000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.7,reviews:12},
+  {id:208,cat:'freezer',brand:'RSA',name:'Sliding Glass Freezer XS-200',price:2199000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:16},
+  {id:209,cat:'freezer',brand:'RSA',name:'Sliding Glass Freezer XS-320',price:3299000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:11},
+  {id:210,cat:'freezer',brand:'Artugo',name:'Chest Freezer CF-131 CN',price:1799000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:24},
+  {id:211,cat:'freezer',brand:'Midea',name:'Chest Freezer CF-150L',price:1999000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:14},
+  {id:212,cat:'freezer',brand:'Midea',name:'Chest Freezer CF-100L',price:1599000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.5,reviews:11},
+  {id:213,cat:'freezer',brand:'Changhong',name:'Chest Freezer FCF336DW',price:3499000,oldPrice:null,emoji:'🧊',badge:'new',rating:4.6,reviews:17},
+  // AC
+  {id:9,cat:'ac',brand:'Midea',name:'AC MSFT 05 CRN8 (1/2 PK)',price:2999000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:44},
+  {id:10,cat:'ac',brand:'Midea',name:'AC MSAF 07 CRN 2 (3/4 PK)',price:3499000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:38},
+  {id:11,cat:'ac',brand:'Midea',name:'AC MSAF-09 CRN 2X (1 PK)',price:3999000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:52},
+  {id:12,cat:'ac',brand:'LG',name:'AC K05NSA (1/2 PK)',price:3299000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.7,reviews:41},
+  {id:301,cat:'ac',brand:'LG',name:'AC K05NVA Inverter (1/2 PK)',price:3799000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.7,reviews:28},
+  {id:302,cat:'ac',brand:'Sharp',name:'AC AH-A9BEY (1 PK)',price:3699000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:35},
+  {id:303,cat:'ac',brand:'Gree',name:'AC GWC-05N1 (1/2 PK)',price:2999000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:67},
+  {id:304,cat:'ac',brand:'Daikin',name:'AC FTC 15 YV14 (1.5 PK)',price:5499000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.8,reviews:22},
+  {id:305,cat:'ac',brand:'Midea',name:'AC MSAF-12 CRN 2x(I) Inverter (1.5 PK)',price:5199000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.7,reviews:19},
+  {id:306,cat:'ac',brand:'Midea',name:'AC MSAFE-18 CRN-2x(I) Inverter (2 PK)',price:6999000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.7,reviews:14},
+  {id:307,cat:'ac',brand:'Gree',name:'AC GWE-05F1S (1/2 PK)',price:3199000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:33},
+  {id:308,cat:'ac',brand:'Gree',name:'AC GPC-09P2 (1 PK)',price:3799000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:17},
+  {id:309,cat:'ac',brand:'Changhong',name:'AC CSC-05NVB4 Inverter (1/2 PK)',price:3299000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:25},
+  {id:310,cat:'ac',brand:'Changhong',name:'AC CSC-05NVS4 Inverter (1/2 PK)',price:3299000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:23},
+  {id:311,cat:'ac',brand:'Changhong',name:'AC CSC-09NVB4 Inverter (1 PK)',price:3999000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:21},
+  {id:312,cat:'ac',brand:'Changhong',name:'AC CSC-09NVS4 Inverter (1 PK)',price:3999000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:18},
+  {id:313,cat:'ac',brand:'Gree',name:'AC GWC-09N1 (1 PK)',price:3599000,oldPrice:null,emoji:'❄️',badge:'new',rating:4.6,reviews:31},
+  // MESIN CUCI
+  {id:13,cat:'mesin cuci',brand:'Sanken',name:'Mesin Cuci 2 Tabung TW-927 (9 Kg)',price:1799000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:54},
+  {id:14,cat:'mesin cuci',brand:'Sharp',name:'Mesin Cuci 2 Tabung ES-T80 MW (8 Kg)',price:1599000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:48},
+  {id:15,cat:'mesin cuci',brand:'RSA',name:'Mesin Cuci 2 Tabung WM-TT-80 (8 Kg)',price:1499000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.5,reviews:31},
+  {id:401,cat:'mesin cuci',brand:'Sharp',name:'Mesin Cuci 2 Tabung ES-T85 NT (8.5 Kg)',price:1699000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:27},
+  {id:402,cat:'mesin cuci',brand:'Sanken',name:'Mesin Cuci 2 Tabung TW-8827 EGY (8 Kg)',price:1599000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.5,reviews:62},
+  {id:403,cat:'mesin cuci',brand:'Sanken',name:'Mesin Cuci 2 Tabung TW-1155 FBK (11 Kg)',price:2199000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:38},
+  {id:404,cat:'mesin cuci',brand:'Toshiba',name:'Mesin Cuci 2 Tabung VH-H85MN WB (7.5 Kg)',price:1699000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:44},
+  {id:405,cat:'mesin cuci',brand:'Toshiba',name:'Mesin Cuci 2 Tabung VH-H95MN WB (8.5 Kg)',price:1799000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:39},
+  {id:406,cat:'mesin cuci',brand:'Toshiba',name:'Mesin Cuci 2 Tabung VH-H75MN WB (6.5 Kg)',price:1499000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.5,reviews:51},
+  {id:407,cat:'mesin cuci',brand:'Toshiba',name:'Mesin Cuci 2 Tabung VH-H85MN WR (7.5 Kg)',price:1699000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:36},
+  {id:408,cat:'mesin cuci',brand:'Toshiba',name:'Mesin Cuci 2 Tabung VH-H75MN WR (6.5 Kg)',price:1499000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.5,reviews:42},
+  {id:409,cat:'mesin cuci',brand:'Toshiba',name:'Mesin Cuci 2 Tabung VH-H95MN WR (8.5 Kg)',price:1799000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:28},
+  {id:410,cat:'mesin cuci',brand:'Toshiba',name:'Mesin Cuci 2 Tabung VH-75MN WV (6.5 Kg)',price:1499000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.5,reviews:22},
+  {id:411,cat:'mesin cuci',brand:'Sharp',name:'Mesin Cuci 2 Tabung ES-T75NT BL-WM (7.5 Kg)',price:1599000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:19},
+  {id:412,cat:'mesin cuci',brand:'Sharp',name:'Mesin Cuci 2 Tabung ES-T75NT-GY-WM (7.5 Kg)',price:1599000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:17},
+  {id:413,cat:'mesin cuci',brand:'Sharp',name:'Mesin Cuci 2 Tabung ES-T75NT-PK-WM (7.5 Kg)',price:1599000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:15},
+  {id:414,cat:'mesin cuci',brand:'Sharp',name:'Mesin Cuci 2 Tabung ES-T65NT-GY (6.5 Kg)',price:1399000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.5,reviews:24},
+  {id:415,cat:'mesin cuci',brand:'RSA',name:'Mesin Cuci 2 Tabung WM-TT-70 (7 Kg)',price:1399000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.5,reviews:33},
+  {id:416,cat:'mesin cuci',brand:'Aqua',name:'Mesin Cuci 1 Tabung AQW-800F',price:1799000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:29},
+  {id:417,cat:'mesin cuci',brand:'Aqua',name:'Mesin Cuci 1 Tabung FQW700824QD (8 Kg)',price:1999000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.6,reviews:18},
+  {id:418,cat:'mesin cuci',brand:'LG',name:'Mesin Cuci 1 Tabung T2109NBTM Black (9 Kg)',price:2499000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.7,reviews:31},
+  {id:419,cat:'mesin cuci',brand:'LG',name:'Mesin Cuci 1 Tabung T2175NBTW (7.5 Kg)',price:2299000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.7,reviews:26},
+  {id:420,cat:'mesin cuci',brand:'Aqua',name:'Mesin Cuci 1 Tabung FQW-700829QD',price:1999000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.5,reviews:14},
+  {id:421,cat:'mesin cuci',brand:'Mito',name:'Mesin Cuci 1 Tabung WM-1',price:1299000,oldPrice:null,emoji:'🌀',badge:'new',rating:4.4,reviews:21},
+  // DISPENSER
+  {id:501,cat:'dispenser',brand:'GEA',name:'Dispenser STAR',price:299000,oldPrice:null,emoji:'💧',badge:'new',rating:4.5,reviews:24},
+  {id:502,cat:'dispenser',brand:'Sanken',name:'Dispenser HWD-C588',price:399000,oldPrice:null,emoji:'💧',badge:'new',rating:4.6,reviews:31},
+  {id:503,cat:'dispenser',brand:'GEA',name:'Dispenser YUPITER',price:349000,oldPrice:null,emoji:'💧',badge:'new',rating:4.5,reviews:52},
+  {id:504,cat:'dispenser',brand:'GEA',name:'Dispenser ORION BLACK',price:449000,oldPrice:null,emoji:'💧',badge:'new',rating:4.6,reviews:43},
+  {id:505,cat:'dispenser',brand:'Mito',name:'Dispenser MD 55',price:279000,oldPrice:null,emoji:'💧',badge:'new',rating:4.4,reviews:18},
+  {id:506,cat:'dispenser',brand:'Modena',name:'Dispenser DD 1314 BABK',price:799000,oldPrice:null,emoji:'💧',badge:'new',rating:4.7,reviews:12},
+  {id:507,cat:'dispenser',brand:'Mito',name:'Dispenser MD 66',price:329000,oldPrice:null,emoji:'💧',badge:'new',rating:4.5,reviews:22},
+  {id:508,cat:'dispenser',brand:'Sanken',name:'Dispenser HWD-C5531C',price:449000,oldPrice:null,emoji:'💧',badge:'new',rating:4.6,reviews:14},
+  {id:509,cat:'dispenser',brand:'Sanken',name:'Dispenser HWD-5551C',price:499000,oldPrice:null,emoji:'💧',badge:'new',rating:4.6,reviews:19},
+  {id:510,cat:'dispenser',brand:'Midea',name:'Dispenser YL 1566S',price:549000,oldPrice:null,emoji:'💧',badge:'new',rating:4.6,reviews:21},
+  {id:511,cat:'dispenser',brand:'Sanex',name:'Dispenser PURPLE D-102',price:249000,oldPrice:null,emoji:'💧',badge:'new',rating:4.4,reviews:33},
+  {id:512,cat:'dispenser',brand:'Sanex',name:'Dispenser GREEN D-102',price:249000,oldPrice:null,emoji:'💧',badge:'new',rating:4.4,reviews:11},
+  {id:513,cat:'dispenser',brand:'Sanex',name:'Dispenser BLUE D-102',price:249000,oldPrice:null,emoji:'💧',badge:'new',rating:4.4,reviews:21},
+  {id:514,cat:'dispenser',brand:'Miyako',name:'Dispenser WD-289 HC',price:379000,oldPrice:null,emoji:'💧',badge:'new',rating:4.5,reviews:9},
+  // KOMPOR
+  {id:601,cat:'kompor',brand:'Modena',name:'Kompor Tanam PC2721 L',price:1299000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:11},
+  {id:602,cat:'kompor',brand:'Modena',name:'Kompor Tanam PC2721 LD',price:1399000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:9},
+  {id:603,cat:'kompor',brand:'Modena',name:'Kompor Tanam BH1945',price:1499000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:13},
+  {id:604,cat:'kompor',brand:'Modena',name:'Kompor Tanam BH1735',price:1299000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:8},
+  {id:605,cat:'kompor',brand:'Modena',name:'Kompor Tanam BH5725 LO',price:1799000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:7},
+  {id:606,cat:'kompor',brand:'Teka',name:'Kompor Tanam GLN 60.3 AI ALTR',price:2999000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.7,reviews:6},
+  {id:607,cat:'kompor',brand:'Modena',name:'Kompor Tanam BH1945 BDBK',price:1599000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:5},
+  {id:608,cat:'kompor',brand:'Modena',name:'Kompor Tanam BH2725 GABK',price:1699000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:7},
+  {id:609,cat:'kompor',brand:'Modena',name:'Kompor Tanam BH1752 LA',price:1399000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:4},
+  {id:610,cat:'kompor',brand:'Artugo',name:'Kompor Tanam AH 2735 FH',price:1199000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:19},
+  {id:611,cat:'kompor',brand:'Artugo',name:'Kompor Tanam AH 27335 FG',price:1199000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:17},
+  {id:612,cat:'kompor',brand:'Artugo',name:'Kompor Tanam AH 2735 FT',price:1299000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:21},
+  {id:613,cat:'kompor',brand:'Artugo',name:'Kompor Tanam AH 2710 NT',price:999000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:12},
+  {id:614,cat:'kompor',brand:'Artugo',name:'Kompor Tanam AH 3933 FB',price:1499000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:9},
+  {id:615,cat:'kompor',brand:'Artugo',name:'Kompor Tanam AH 2733 FI',price:1199000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:22},
+  {id:616,cat:'kompor',brand:'Artugo',name:'Kompor Tanam AH 2732 FV',price:1099000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:8},
+  {id:617,cat:'kompor',brand:'Artugo',name:'Kompor Tanam AH 2715 FL',price:1099000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:6},
+  {id:618,cat:'kompor',brand:'Artugo',name:'Kompor Tanam AH 2710 NX',price:999000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:5},
+  {id:619,cat:'kompor',brand:'Artugo',name:'Kompor Tanam AH 2705 BL',price:899000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.4,reviews:14},
+  {id:620,cat:'kompor',brand:'Teka',name:'Kompor Tanam TLP 122',price:1999000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:16},
+  {id:621,cat:'kompor',brand:'Teka',name:'Kompor Tanam LDE 78.36 AI AL2TR',price:3499000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.7,reviews:5},
+  {id:622,cat:'kompor',brand:'Teka',name:'Kompor Tanam GLM 86.3G AI AL2TR',price:3999000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.7,reviews:4},
+  {id:623,cat:'kompor',brand:'Teka',name:'Kompor Tanam GLIX 86.3G AI ALT2R',price:3799000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.7,reviews:3},
+  {id:624,cat:'kompor',brand:'Teka',name:'Kompor Tanam LWE 78.2G AI AL2TR',price:3299000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.7,reviews:4},
+  {id:625,cat:'kompor',brand:'Teka',name:'Kompor Tanam TLP 101',price:1799000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:7},
+  {id:626,cat:'kompor',brand:'Teka',name:'Kompor Tanam GWX 86.3GT AI AL',price:4299000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.7,reviews:3},
+  {id:627,cat:'kompor',brand:'Teka',name:'Kompor Tanam GKF LUX 75.26 AI AL 2TR',price:3999000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.7,reviews:2},
+  {id:628,cat:'kompor',brand:'Teka',name:'Kompor Tanam LWE 73.2G AI AL 2TR',price:2999000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.7,reviews:3},
+  {id:629,cat:'kompor',brand:'Teka',name:'Kompor Tanam GLM 73.2G AI AL 2TR',price:3499000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.7,reviews:2},
+  {id:630,cat:'kompor',brand:'Teka',name:'Kompor Tanam GWX 75.2GT AI AL 2TR',price:3799000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.7,reviews:2},
+  {id:631,cat:'kompor',brand:'Teka',name:'Kompor Tanam LDE 73.2G AI AL 2TR',price:2799000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:3},
+  {id:632,cat:'kompor',brand:'Teka',name:'Kompor Tanam GLIX 73.2G AI AL 2TR',price:3199000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.7,reviews:2},
+  {id:633,cat:'kompor',brand:'Rinnai',name:'Kompor Tanam RI-602E',price:999000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:8},
+  {id:634,cat:'kompor',brand:'Rinnai',name:'Kompor Tanam RI-522CE',price:899000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:7},
+  {id:635,cat:'kompor',brand:'Rinnai',name:'Kompor Tanam RI-522C',price:799000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.5,reviews:11},
+  {id:636,cat:'kompor',brand:'Rinnai',name:'Kompor Tanam RI-524E',price:899000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.6,reviews:6},
+  {id:637,cat:'kompor',brand:'Modena',name:'Kompor Free Standing FC 96425 + Oven',price:8999000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.8,reviews:4},
+  {id:638,cat:'kompor',brand:'Sekai',name:'Kompor Gas GS-53 Blue',price:299000,oldPrice:null,emoji:'🔥',badge:'new',rating:4.4,reviews:18},
+  // COOKER HOOD
+  {id:701,cat:'cooker hood',brand:'Modena',name:'Cooker Hood SX 1650IV',price:1499000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.6,reviews:9},
+  {id:702,cat:'cooker hood',brand:'Modena',name:'Cooker Hood SX 7511',price:1699000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.6,reviews:8},
+  {id:703,cat:'cooker hood',brand:'Modena',name:'Cooker Hood AX0711 BABK',price:1399000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.6,reviews:7},
+  {id:704,cat:'cooker hood',brand:'Modena',name:'Cooker Hood SX 9502 LS',price:2199000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.7,reviews:6},
+  {id:705,cat:'cooker hood',brand:'Modena',name:'Cooker Hood 9502V',price:1999000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.7,reviews:5},
+  {id:706,cat:'cooker hood',brand:'Artugo',name:'Cooker Hood AX 9101 SB',price:1299000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.5,reviews:11},
+  {id:707,cat:'cooker hood',brand:'Artugo',name:'Cooker Hood AX 7101 SB',price:1099000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.5,reviews:9},
+  {id:708,cat:'cooker hood',brand:'Artugo',name:'Cooker Hood AX 6101 SB',price:999000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.5,reviews:7},
+  {id:709,cat:'cooker hood',brand:'Artugo',name:'Cooker Hood AX 7752 SB',price:1199000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.5,reviews:6},
+  {id:710,cat:'cooker hood',brand:'Teka',name:'Cooker Hood LSI 701 Black',price:2499000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.7,reviews:5},
+  {id:711,cat:'cooker hood',brand:'Teka',name:'Cooker Hood HSI 601 Black',price:2299000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.7,reviews:4},
+  {id:712,cat:'cooker hood',brand:'Teka',name:'Cooker Hood LSI 601 Black',price:2199000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.7,reviews:4},
+  {id:713,cat:'cooker hood',brand:'Teka',name:'Cooker Hood HGI 902 Slim Black',price:3299000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.8,reviews:3},
+  {id:714,cat:'cooker hood',brand:'Teka',name:'Cooker Hood HSI 902 Black',price:2999000,oldPrice:null,emoji:'🌬️',badge:'new',rating:4.8,reviews:3},
+  // RICE COOKER
+  {id:801,cat:'rice cooker',brand:'Sanken',name:'Rice Cooker SJ-150',price:299000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.5,reviews:54},
+  {id:802,cat:'rice cooker',brand:'Miyako',name:'Rice Cooker MCM-606-SBC',price:249000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.5,reviews:41},
+  {id:803,cat:'rice cooker',brand:'Kirin',name:'Rice Cooker KRC-809',price:279000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.5,reviews:38},
+  {id:804,cat:'rice cooker',brand:'Sanken',name:'Rice Cooker SJ-2500GL',price:399000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.6,reviews:47},
+  {id:805,cat:'rice cooker',brand:'Kirin',name:'Rice Cooker KRC-620D',price:229000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.4,reviews:29},
+  {id:806,cat:'rice cooker',brand:'Miyako',name:'Rice Cooker MCM-528-SF',price:269000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.5,reviews:35},
+  {id:807,cat:'rice cooker',brand:'Miyako',name:'Rice Cooker MCM-528-TS',price:279000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.5,reviews:42},
+  {id:808,cat:'rice cooker',brand:'Sanken',name:'Rice Cooker SJ-D5000',price:599000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.7,reviews:31},
+  {id:809,cat:'rice cooker',brand:'Philips',name:'Rice Cooker HD-4712/31',price:499000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.7,reviews:38},
+  {id:810,cat:'rice cooker',brand:'Philips',name:'Rice Cooker HD-3003/30',price:329000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.6,reviews:51},
+  {id:811,cat:'rice cooker',brand:'Philips',name:'Rice Cooker HD-3210',price:349000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.6,reviews:27},
+  {id:812,cat:'rice cooker',brand:'Philips',name:'Rice Cooker HD-3003/31',price:329000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.6,reviews:44},
+  {id:813,cat:'rice cooker',brand:'Miyako',name:'Rice Cooker MCM-508-SBC',price:239000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.5,reviews:33},
+  {id:814,cat:'rice cooker',brand:'Sanken',name:'Rice Cooker SJ-2828 PK',price:449000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.6,reviews:22},
+  {id:815,cat:'rice cooker',brand:'Cosmos',name:'Rice Cooker CRJ-6505',price:349000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.5,reviews:19},
+  {id:816,cat:'rice cooker',brand:'Miyako',name:'Rice Cooker MCM-509',price:199000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.4,reviews:87},
+  {id:817,cat:'rice cooker',brand:'Cosmos',name:'Rice Cooker CRJ-1803',price:279000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.5,reviews:24},
+  {id:818,cat:'rice cooker',brand:'Cosmos',name:'Rice Cooker CRJ-3012',price:319000,oldPrice:null,emoji:'🍚',badge:'new',rating:4.5,reviews:31},
+  // WATER HEATER
+  {id:901,cat:'water heater',brand:'Ariston',name:'Water Heater Listrik 15L AURES TOP 15',price:1499000,oldPrice:1699000,emoji:'🚿',badge:'promo',rating:4.8,reviews:312},
+  {id:902,cat:'water heater',brand:'Rinnai',name:'Water Heater Gas RWH-ES80C',price:1899000,oldPrice:null,emoji:'🚿',badge:'new',rating:4.7,reviews:234},
+  {id:903,cat:'water heater',brand:'Modena',name:'Water Heater Listrik 30L ES 3001',price:1299000,oldPrice:1499000,emoji:'🚿',badge:'promo',rating:4.7,reviews:187},
+  {id:904,cat:'water heater',brand:'Wika',name:'Water Heater Listrik 10L EWH 10T',price:999000,oldPrice:null,emoji:'🚿',badge:'new',rating:4.5,reviews:156},
+  {id:905,cat:'water heater',brand:'Ariston',name:'Water Heater Listrik 30L AURES TOP 30',price:1999000,oldPrice:2299000,emoji:'🚿',badge:'promo',rating:4.8,reviews:143},
+  {id:906,cat:'water heater',brand:'Rinnai',name:'Water Heater Gas Instant REU-5CFC',price:2499000,oldPrice:null,emoji:'🚿',badge:'best',rating:4.9,reviews:98},
+  {id:907,cat:'water heater',brand:'Modena',name:'Water Heater Gas ES 3001 G',price:1799000,oldPrice:1999000,emoji:'🚿',badge:'promo',rating:4.7,reviews:112},
+  // KIPAS ANGIN
+  {id:1001,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  IST 2041 ',price:449000,oldPrice:499000,emoji:'💨',badge:'promo',rating:4.7,reviews:387},
+  {id:1002,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  SFN 1622 BLACK 16',price:299000,oldPrice:null,emoji:'💨',badge:'new',rating:4.6,reviews:312},
+  {id:1003,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  IWF 2025  12',price:149000,oldPrice:179000,emoji:'💨',badge:'promo',rating:4.5,reviews:445},
+  {id:1004,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  1218 BLACK 40cm',price:399000,oldPrice:null,emoji:'💨',badge:'new',rating:4.6,reviews:287},
+  {id:1005,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  IFL 1850',price:599000,oldPrice:679000,emoji:'💨',badge:'promo',rating:4.7,reviews:198},
+  {id:1006,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  WEK 1090',price:349000,oldPrice:null,emoji:'💨',badge:'new',rating:4.5,reviews:234},
+  {id:1007,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  IME 1693 NS',price:249000,oldPrice:289000,emoji:'💨',badge:'promo',rating:4.6,reviews:321},
+  {id:1008,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  MVF 1293 ',price:199000,oldPrice:null,emoji:'💨',badge:'new',rating:4.5,reviews:276},
+  {id:1009,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  COF 1663',price:799000,oldPrice:899000,emoji:'💨',badge:'promo',rating:4.7,reviews:156},
+  {id:1010,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  DFN 1217 BLACK',price:399000,oldPrice:null,emoji:'💨',badge:'new',rating:4.6,reviews:178},
+  {id:1011,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  HWN 1859 RC',price:179000,oldPrice:219000,emoji:'💨',badge:'promo',rating:4.4,reviews:267},
+  {id:1012,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  IST 2676 M',price:699000,oldPrice:799000,emoji:'💨',badge:'promo',rating:4.7,reviews:143},
+  {id:1013,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  893',price:999000,oldPrice:null,emoji:'💨',badge:'best',rating:4.9,reviews:89},
+  {id:1014,cat:'kipas angin',brand:'Sekai',name:'Kipas Angin  IFL 1875 TC',price:99000,oldPrice:119000,emoji:'💨',badge:'promo',rating:4.3,reviews:534},
+  {id:1015,cat:'kipas angin',brand:'Maspion',name:'Kipas Angin  EX - 1745',price:229000,oldPrice:null,emoji:'💨',badge:'new',rating:4.5,reviews:198},
+  {id:1016,cat:'kipas angin',brand:'Maspion',name:'Kipas Angin  WFN 4002K',price:449000,oldPrice:499000,emoji:'💨',badge:'promo',rating:4.6,reviews:122},
+  {id:1017,cat:'kipas angin',brand:'Maspion',name:'Kipas Angin  PW-2006W',price:1199000,oldPrice:1399000,emoji:'💨',badge:'promo',rating:4.8,reviews:77},
+  {id:1018,cat:'kipas angin',brand:'Maspion',name:'Kipas Angin  F.23D',price:349000,oldPrice:null,emoji:'💨',badge:'new',rating:4.5,reviews:211},
+  {id:1019,cat:'kipas angin',brand:'Philips',name:'Kipas Angin ACP 610',price:299000,oldPrice:349000,emoji:'💨',badge:'promo',rating:4.6,reviews:167},
+  {id:1020,cat:'kipas angin',brand:'Miyako',name:'Kipas Angin KAS - 1606 X ',price:849000,oldPrice:null,emoji:'💨',badge:'new',rating:4.7,reviews:65},
+  {id:1021,cat:'kipas angin',brand:'Cosmos',name:'Kipas Angin  16 - XDC',price:299000,oldPrice:349000,emoji:'💨',badge:'promo',rating:4.6,reviews:234},
+  {id:1022,cat:'kipas angin',brand:'Kirin',name:'Kipas Angin KIF1821 BLACK',price:169000,oldPrice:null,emoji:'💨',badge:'new',rating:4.4,reviews:298},
+  {id:1023,cat:'kipas angin',brand:'Yasaka',name:'Kipas Angin 605 KATAK HIJAU',price:399000,oldPrice:449000,emoji:'💨',badge:'promo',rating:4.5,reviews:144},
+  {id:1024,cat:'kipas angin',brand:'Profan',name:'Kipas Angin  DORAEMON BIRU',price:549000,oldPrice:null,emoji:'💨',badge:'new',rating:4.6,reviews:156},
+  {id:1025,cat:'kipas angin',brand:'Profan',name:'Kipas Angin MACAN KUNING',price:379000,oldPrice:429000,emoji:'💨',badge:'promo',rating:4.7,reviews:189},
+  {id:1026,cat:'kipas angin',brand:'Yasaka',name:'SPIDERMAN MERAH',price:129000,oldPrice:null,emoji:'💨',badge:'new',rating:4.4,reviews:345},
+  {id:1027,cat:'kipas angin',brand:'Yasaka',name:'Kipas Angin  IRONMAN 605 MERAH ',price:499000,oldPrice:579000,emoji:'💨',badge:'promo',rating:4.6,reviews:112},
+  {id:1028,cat:'kipas angin',brand:'Profan',name:'Kipas Angin ANGRY BIRD',price:479000,oldPrice:null,emoji:'💨',badge:'new',rating:4.7,reviews:88},
+  {id:1029,cat:'kipas angin',brand:'Mito',name:'Kipas Angin 1833 CF BLACK',price:749000,oldPrice:849000,emoji:'💨',badge:'promo',rating:4.7,reviews:103},
+  {id:1030,cat:'kipas angin',brand:'Mito',name:'Kipas Angin 1233 CF BLACK',price:899000,oldPrice:null,emoji:'💨',badge:'best',rating:4.8,reviews:57},
+  {id:1031,cat:'kipas angin',brand:'Miyako',name:'Kipas Angin KAB - 1281',price:329000,oldPrice:379000,emoji:'💨',badge:'promo',rating:4.6,reviews:134},
+  // WATER HEATER
+  {id:2001,cat:'water heater',brand:'Ariston',name:'Water Heater AN2 B 10L',price:999000,oldPrice:null,emoji:'🚿',badge:'new',rating:4.7,reviews:45},
+  {id:2002,cat:'water heater',brand:'Ariston',name:'Water Heater AN2 B 15L',price:1199000,oldPrice:null,emoji:'🚿',badge:'new',rating:4.7,reviews:38},
+  {id:2003,cat:'water heater',brand:'Ariston',name:'Water Heater AN2 R 15L',price:1299000,oldPrice:null,emoji:'🚿',badge:'new',rating:4.8,reviews:52},
+  {id:2004,cat:'water heater',brand:'Ariston',name:'Water Heater FAST R ONMS LPG 10N',price:1899000,oldPrice:null,emoji:'🚿',badge:'best',rating:4.8,reviews:67},
+  {id:2005,cat:'water heater',brand:'Sterlyn',name:'Water Heater SD10-20VG1(S)',price:899000,oldPrice:null,emoji:'🚿',badge:'new',rating:4.5,reviews:23},
+  {id:2006,cat:'water heater',brand:'Sterlyn',name:'Water Heater SD15-25VG1(S)',price:1099000,oldPrice:null,emoji:'🚿',badge:'new',rating:4.5,reviews:19},
+  {id:2007,cat:'water heater',brand:'Sterlyn',name:'Water Heater SD30-25VG1(S)',price:1399000,oldPrice:null,emoji:'🚿',badge:'new',rating:4.6,reviews:14},
+];
+
+const fmt = n => 'Rp ' + n.toLocaleString('id-ID');
+const stars = r => '★'.repeat(Math.floor(r)) + (r%1>=0.5?'½':'') + ' ' + r;
+
+let currentCat = 'semua';
+let currentSort = 'default';
+let currentSearch = '';
+
+function getCounts(){
+  const cats = ['tv','kulkas','ac','mesin cuci','freezer','kipas angin','dispenser','kompor','cooker hood','rice cooker','water heater'];
+  document.getElementById('cnt-semua').textContent = products.length;
+  cats.forEach(c=>{
+    const el = document.getElementById('cnt-'+c);
+    if(el) el.textContent = products.filter(p=>p.cat===c).length;
+  });
+}
+
+function setCategory(cat){
+  currentCat = cat;
+  document.querySelectorAll('.cat-btn').forEach(b=>{
+    b.classList.toggle('active', b.getAttribute('onclick').includes(`'${cat}'`));
+  });
+  const labels = {
+    'semua':'Semua Produk','tv':'TV & Audio','kulkas':'Kulkas',
+    'ac':'AC','mesin cuci':'Mesin Cuci',
+    'freezer':'Freezer','kipas angin':'Kipas Angin','dispenser':'Dispenser',
+    'kompor':'Kompor','cooker hood':'Cooker Hood','rice cooker':'Rice Cooker',
+    'water heater':'Water Heater'
+  };
+  document.getElementById('categoryTitle').textContent = labels[cat]||cat;
+  render();
+}
+
+function sortProducts(v){ currentSort=v; render(); }
+function filterProducts(){ currentSearch=document.getElementById('searchInput').value.toLowerCase(); render(); }
+
+function render(){
+  let list = products.filter(p=>{
+    const inCat = currentCat==='semua' || p.cat===currentCat;
+    const inSearch = !currentSearch || p.name.toLowerCase().includes(currentSearch) || p.brand.toLowerCase().includes(currentSearch);
+    return inCat && inSearch;
+  });
+  if(currentSort==='price-asc') list.sort((a,b)=>a.price-b.price);
+  else if(currentSort==='price-desc') list.sort((a,b)=>b.price-a.price);
+  else if(currentSort==='name-asc') list.sort((a,b)=>a.name.localeCompare(b.name));
+
+  const grid = document.getElementById('productGrid');
+  const empty = document.getElementById('emptyState');
+  document.getElementById('productCount').textContent = list.length + ' produk ditemukan';
+
+  if(!list.length){ grid.innerHTML=''; empty.style.display='block'; return; }
+  empty.style.display='none';
+
+  grid.innerHTML = list.map(p=>`
+    <div class="card">
+      <div class="card-img" id="img-wrap-${p.id}" onclick="triggerUpload(${p.id})">
+        <div class="card-img-placeholder" id="placeholder-${p.id}">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 21h18M3.75 3h16.5M4.5 3v18M19.5 3v18"/></svg>
+          Klik untuk upload foto
+        </div>
+        <img id="img-${p.id}" src="" alt="${p.name}" style="display:none;">
+        <div class="card-img-overlay">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487z"/></svg>
+        </div>
+        <input type="file" accept="image/*" id="file-${p.id}" style="display:none;" onchange="loadImage(event,${p.id})">
+      </div>
+      <div class="card-body">
+        <div class="card-brand">${p.brand}</div>
+        ${p.badge?`<span class="card-badge badge-${p.badge}">${p.badge==='promo'?'🔥 Promo':p.badge==='new'?'✨ Baru':'⭐ Terlaris'}</span>`:''}
+        <div class="card-name">${p.name}</div>
+        <div class="card-rating"><span>★</span> ${p.rating} (${p.reviews} ulasan)</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function triggerUpload(id){
+  const fileInput = document.getElementById('file-'+id);
+  if(fileInput) fileInput.click();
+}
+
+function loadImage(event, id){
+  const file = event.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e){
+    const img = document.getElementById('img-'+id);
+    const placeholder = document.getElementById('placeholder-'+id);
+    if(img && placeholder){
+      img.src = e.target.result;
+      img.style.display = 'block';
+      placeholder.style.display = 'none';
+    }
+  };
+  reader.readAsDataURL(file);
+}
+
+getCounts();
+render();
+</script>
+</body>
+</html>
